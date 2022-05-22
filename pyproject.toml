@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "sphinx", "sphinx_rtd_theme"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SMEAGOL"
+version = "2022.0.0"
+description = "Social Media Engagement Activity for Generating Optimized Logistics (SMEAGOL)"
+readme = "README.md"
+keywords = ["smeagol", "python", "social media", "twitter", "spotify"]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "matplotlib",
+    "importlib-metadata; python_version>='3.9'",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["smeagol*"]
+exclude = [""]
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"]}
